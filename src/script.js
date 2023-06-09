@@ -20,8 +20,35 @@
         elemMinutes.innerText = countMinutes < 10 ? '0' + countMinutes : countMinutes;
         elemSeconds.innerText = countSeconds < 10 ? '0' + countSeconds : countSeconds;
     }
-    
+
     countdown();
     setInterval(countdown, 1000);
 })();
 
+
+const btnSendEmail = document.querySelector('.footer-search__btn');
+const inputEmail = document.querySelector('.footer-search__input');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__img');
+const btnClosePopup = document.querySelector('.popup__button');
+
+btnSendEmail.addEventListener('click', () => {
+    popup.style.display = 'block';
+})
+inputEmail.addEventListener('input', () => {
+    validationInput();
+})
+function validationInput(){
+    let reg = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
+    let valid = reg.test(inputEmail.value);
+    valid ? (inputEmail.style.border = "1px solid green") : (inputEmail.style.border = "1px solid red");
+    if (inputEmail.style.border == "1px solid green") {
+        btnSendEmail.disabled = false;
+        btnSendEmail.style.background = "green";  
+    }
+}
+function cancelPopup(){
+    popup.style.display = 'none';
+}
+closePopup.addEventListener('click', cancelPopup);
+btnClosePopup.addEventListener('click', cancelPopup);
