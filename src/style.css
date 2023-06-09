@@ -49,3 +49,89 @@ body{
     margin: 0 auto;
     max-width: 190px;
 }
+.title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #162C4E;
+    opacity: 0.39;
+}
+.text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+.countdown__title{
+    margin-bottom: 8px;
+}
+.countdown__text{
+    max-width: 423px;
+    margin: 0 auto;
+}
+.countdown__timer{
+    margin-top: 32px;
+    margin-bottom: 70px;
+}
+.timer-items {
+    display: flex;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162C4E;
+    justify-content: center;
+}
+.timer__item{
+   text-align: center;
+   position: relative;
+   padding-right: 24px;
+}
+.timer__item:not(:last-child)::after {
+    position: absolute;
+    content: ':';
+    right: 0;
+    top: 0;
+}
+.timer__title{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+.timer__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.countdown-button__subtitle{
+    margin-bottom: 12px;
+}
+.countdown__form{
+    text-align: center;
+}
+.form__button{
+    width: 240px;
+    height: 60px;
+    background: #1D4169;
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+}
+.button__img{
+    margin-left: 30px;
+}
