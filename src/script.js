@@ -110,3 +110,18 @@ btnClosePopup.addEventListener('click', cancelPopup);
 btnOtherEvents.addEventListener('click', () => {
     blockEvents.scrollIntoView({block: "start", behavior: "smooth"});
 })
+
+const arrayAcordionButton = document.querySelectorAll('.acardion-button');
+let activeButton = document.querySelector('.acardion-button__active');
+
+for(let i = 0; i < arrayAcordionButton.length; i++){
+    arrayAcordionButton[i].addEventListener('click', () => {
+        arrayAcordionButton[i].classList.add('acardion-button__active');
+        arrayAcordionButton[i].nextElementSibling.classList.add('acardion-body__active');
+        if (activeButton) {
+            activeButton.classList.remove('acardion-button__active');
+            activeButton.nextElementSibling.classList.remove('acardion-body__active');
+          }
+        activeButton = (activeButton === arrayAcordionButton[i]) ? 0 : arrayAcordionButton[i];
+    })
+}
