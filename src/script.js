@@ -31,6 +31,8 @@ const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__img');
 const btnClosePopup = document.querySelector('.popup__button');
 const formEmail = document.querySelector('.footer-search');
+const popupTitle = document.querySelector('.popup__title');
+const popupText = document.querySelector('.popup__text');
 
 formEmail.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -79,13 +81,15 @@ async function submitEmail() {
 }
 
 function showPopup(){
+    if (popupTitle.innerText === 'ERROR!'){
+        popupTitle.innerText = 'SUCCESS!';
+        popupText.innerText = 'You have successfully subscribed to the email newsletter';
+    }
     popup.style.display = 'block';
 }
 
 function showPopupError(){
-    const popupTitle = document.querySelector('.popup__title');
     popupTitle.innerText = 'ERROR!';
-    const popupText = document.querySelector('.popup__text');
     popupText.innerText = 'An error has occurred! You have not subscribed to the email newsletter. Try later!';
     popup.style.display = 'block';
 }
