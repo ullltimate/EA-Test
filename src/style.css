@@ -302,6 +302,9 @@ body{
     font-style: normal;
     color: #FFFFFF;
 }
+.events-acardion{
+    margin-bottom: 100px;
+}
 .acardion__border__red{
     border-bottom: solid 2px #DF2224
 }

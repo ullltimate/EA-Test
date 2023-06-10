@@ -33,6 +33,8 @@ const btnClosePopup = document.querySelector('.popup__button');
 const formEmail = document.querySelector('.footer-search');
 const popupTitle = document.querySelector('.popup__title');
 const popupText = document.querySelector('.popup__text');
+const btnOtherEvents = document.querySelector('.footer__button');
+const blockEvents = document.getElementById('all-events');
 
 formEmail.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -104,3 +106,7 @@ function cancelPopup(){
 
 closePopup.addEventListener('click', cancelPopup);
 btnClosePopup.addEventListener('click', cancelPopup);
+
+btnOtherEvents.addEventListener('click', () => {
+    blockEvents.scrollIntoView({block: "start", behavior: "smooth"});
+})
