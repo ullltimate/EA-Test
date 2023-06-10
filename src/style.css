@@ -297,6 +297,100 @@ body{
     padding-top: 110px;
     padding-bottom: 40px;
 }
+.text__font{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    color: #FFFFFF;
+}
+.acardion__border__red{
+    border-bottom: solid 2px #DF2224
+}
+.acardion-item{
+    display: flex;
+}
+.acardion-button{
+    width: 85px;
+    height: 682px;
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-1.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    margin-right: 1px;
+}
+.active, 
+.acardion-button:hover{
+    background: #162C4E;
+}
+.acardion__title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 27px;
+}
+.acardion__title__text-direction{
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+}
+.acardion__number{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+}
+.acardion-body{
+    width: 995px;
+    height: 682px;
+    background: url(./assets/images/slide-1.jpeg) no-repeat 20% 38%;
+    background-size: cover;
+    transform: scale(-1, 1);
+    position: relative;
+    overflow: hidden;
+}
+.acardion__descr{
+    transform: scale(-1, 1);
+    width: 364px;
+    height: inherit;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.descr__number{
+    font-weight: 600;
+    font-size: 380px;
+    line-height: 100%;
+    text-align: right;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.04);
+    position: absolute;
+    left: -40%;
+    top: -5%;
+}
+.descr__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    padding: 478px 0 12px 42px;
+}
+.descr__date{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 0 25px 42px;
+}
+.descr__button{
+    width: 256px;
+    height: 62px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-left: 8px solid rgba(255, 255, 255, 0.8);
+    margin-left: 42px;
+}
 @media screen and (max-width: 1030px) {
     body{
         background: url(./assets/images/bg-left.svg) left top no-repeat,
