@@ -304,6 +304,9 @@ body{
 }
 .events-acardion{
     margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .acardion__border__red{
     border-bottom: solid 2px #DF2224
@@ -319,9 +322,30 @@ body{
     position: relative;
     margin-right: 1px;
 }
-.active, 
+.acardion-button__bg__slide2{
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-2.jpeg') no-repeat center;
+    background-size: cover;
+}
+.acardion-button__bg__slide3-8{
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-3-8.jpeg') no-repeat center;
+    background-size: cover;
+}
+.acardion-button__bg__slide4-5{
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-4-5.jpeg') no-repeat center;
+    background-size: cover;
+}
+.acardion-button__bg__slide6{
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-6.jpeg') no-repeat center;
+    background-size: cover;
+}
+.acardion-button__bg__slide7{
+    background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-7.jpeg') no-repeat center;
+    background-size: cover;
+}
+.acardion-button__active, 
 .acardion-button:hover{
     background: #162C4E;
+    cursor: pointer;
 }
 .acardion__title{
     font-weight: 600;
@@ -351,6 +375,39 @@ body{
     transform: scale(-1, 1);
     position: relative;
     overflow: hidden;
+    display: none;
+}
+.acardion-body__active{
+    display: block;
+}
+.acardion-body__bg__slide2{
+    background: url(./assets/images/slide-2.jpeg) no-repeat 20% 75%;
+    background-size: cover;
+    transform: none;
+}
+.acardion-body__bg__slide3-8{
+    background: url(./assets/images/slide-3-8.jpeg) no-repeat 20% 75%;
+    background-size: cover;
+    transform: none;
+}
+.acardion-body__bg__slide4-5{
+    background: url(./assets/images/slide-4-5.jpeg) no-repeat 20% 75%;
+    background-size: cover;
+    transform: none;
+}
+.acardion-body__bg__slide6{
+    background: url(./assets/images/slide-6.jpeg) no-repeat 20% 75%;
+    background-size: cover;
+    transform: none;
+}
+.acardion-body__bg__slide7{
+    background: url(./assets/images/slide-7.jpeg) no-repeat 20% 75%;
+    background-size: cover;
+    transform: none;
+}
+.acardion__descr__position__left{
+    transform: none !important;
+    left: 0;
 }
 .acardion__descr{
     transform: scale(-1, 1);
