@@ -25,19 +25,27 @@
     setInterval(countdown, 1000);
 })();
 
-
 const btnSendEmail = document.querySelector('.footer-search__btn');
 const inputEmail = document.querySelector('.footer-search__input');
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__img');
 const btnClosePopup = document.querySelector('.popup__button');
+const formEmail = document.querySelector('.footer-search');
 
-btnSendEmail.addEventListener('click', () => {
-    popup.style.display = 'block';
+formEmail.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    let status = await submitEmail();
+    if (status === true){
+        showPopup();
+    } else {
+        showPopupError();
+    }
 })
+
 inputEmail.addEventListener('input', () => {
     validationInput();
 })
+
 function validationInput(){
     let reg = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
     let valid = reg.test(inputEmail.value);
@@ -47,8 +55,48 @@ function validationInput(){
         btnSendEmail.style.background = "green";  
     }
 }
+
+async function submitEmail() {
+    try {
+        const response = await fetch(
+            'https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                  title: 'Email',
+                  body: `${inputEmail.value}`,
+                  userId: 1,
+                }),
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8',
+                },
+            });
+        const result = await response.json();
+        console.log(result);
+        return response.ok;
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+function showPopup(){
+    popup.style.display = 'block';
+}
+
+function showPopupError(){
+    const popupTitle = document.querySelector('.popup__title');
+    popupTitle.innerText = 'ERROR!';
+    const popupText = document.querySelector('.popup__text');
+    popupText.innerText = 'An error has occurred! You have not subscribed to the email newsletter. Try later!';
+    popup.style.display = 'block';
+}
+
 function cancelPopup(){
     popup.style.display = 'none';
+    btnSendEmail.disabled = true;
+    inputEmail.value = '';
+    btnSendEmail.style.background = "#DF2224";
+    inputEmail.style.border = `1px solid rgba(0, 0, 0, 0.8)`
 }
+
 closePopup.addEventListener('click', cancelPopup);
 btnClosePopup.addEventListener('click', cancelPopup);
