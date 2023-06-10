@@ -450,12 +450,104 @@ body{
     border: 2px solid rgba(255, 255, 255, 0.8);
     border-left: 8px solid rgba(255, 255, 255, 0.8);
     margin-left: 42px;
+    font-size: 18px;
+}
+@media screen and (max-width: 1698px) {
+    .acardion-button{
+        width: 900px;
+        height: 85px;
+        margin: 4px 0px;
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-1.jpeg') no-repeat center;
+        background-size: cover;
+    }
+    .acardion__title__text-direction{
+        writing-mode: horizontal-tb; 
+        transform: none;
+    }
+    .acardion__title{
+        bottom: 26px;
+        left: 106px;
+    }
+    .acardion-item{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .acardion-body{
+        width: 900px;
+    }
+    .acardion-button__bg__slide2{
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-2.jpeg') no-repeat center;
+        background-size: cover;
+    }
+    .acardion-button__bg__slide3-8{
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-3-8.jpeg') no-repeat center;
+        background-size: cover;
+    }
+    .acardion-button__bg__slide4-5{
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-4-5.jpeg') no-repeat center;
+        background-size: cover;
+    }
+    .acardion-button__bg__slide6{
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-6.jpeg') no-repeat center;
+        background-size: cover;
+    }
+    .acardion-button__bg__slide7{
+        background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-7.jpeg') no-repeat center;
+        background-size: cover;
+    }
 }
 @media screen and (max-width: 1030px) {
     body{
         background: url(./assets/images/bg-left.svg) left top no-repeat,
         #fff url(./assets/images/bg-right.svg) right top no-repeat; 
         background-size: 260px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .events-acardion{
+        margin-bottom: 48px;
+    }
+    .events__title{
+        padding-top: 46px;
+        padding-bottom: 20px;
+    }
+    .acardion-button{
+        width: 688px;
+    }
+    .acardion-body{
+        width: 688px;
+        height: 460px;
+    }
+    .acardion__title{
+        font-size: 24px;
+        bottom: 30px;
+    }
+    .acardion__number{
+        font-size: 32px;
+        bottom: 26px;
+        left: 40px;
+    }
+    .acardion__descr{
+        width: inherit;
+        height: 192px;
+        top: 268px;
+    }
+    .descr__number{
+        font-size: 152px;
+        left: 80%;
+    }
+    .descr__title{
+        padding: 25px 0 8px 40px;
+        font-size: 18px;
+    }
+    .descr__date{
+        padding-bottom: 29px;
+    }
+    .descr__button{
+        width: 169px;
+        height: 44px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -530,6 +622,64 @@ body{
 @media screen and (min-width: 769px) {
     .for-small-screens {
       display:none;
+    }
+}
+@media screen and (max-width: 688px) {
+    .acardion-button,
+    .acardion-body{
+        width: 500px;
+    }
+    .descr__number{
+        left: 75%;
+    }
+}
+@media screen and (max-width: 510px) {
+    .events__title{
+        padding-top: 60px;
+    }
+    .acardion-button,
+    .acardion-body{
+        width: 320px;
+    }
+    .acardion-button{
+        height: 64px;
+    }
+    .acardion__title{
+        font-size: 18px;
+        left: 62px;
+        bottom: 22px;
+    }
+    .acardion__number{
+        font-size: 24px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .acardion-item:nth-child(6) .acardion__title{
+        bottom: 14px;
+    }
+    .acardion-body{
+        height: 376px;
+    }
+    .acardion__descr{
+        width: inherit;
+        height: 158px;
+        top: 218px;
+    }
+    .descr__number{
+        font-size: 80px;
+        left: 78%;
+        top: 10%;
+    }
+    .descr__title{
+        padding: 24px 0 8px 20px;
+        font-size: 16px;
+    }
+    .descr__date{
+        padding: 0 0 22px 20px;
+        font-size: 14px;
+    }
+    .descr__button{
+        margin-left: 20px;
     }
 }
 @media screen and (max-width: 493px) {
