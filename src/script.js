@@ -121,7 +121,9 @@ for(let i = 0; i < arrayAcordionButton.length; i++){
         if (activeButton) {
             activeButton.classList.remove('acardion-button__active');
             activeButton.nextElementSibling.classList.remove('acardion-body__active');
-          }
-        activeButton = (activeButton === arrayAcordionButton[i]) ? 0 : arrayAcordionButton[i];
+        }
+        activeButton = (activeButton === arrayAcordionButton[i]) ? arrayAcordionButton[0] : arrayAcordionButton[i];
+        activeButton.classList.add('acardion-button__active');
+        activeButton.nextElementSibling.classList.add('acardion-body__active');
     })
 }

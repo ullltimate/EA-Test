@@ -344,7 +344,7 @@ body{
 }
 .acardion-button__active, 
 .acardion-button:hover{
-    background: #162C4E;
+    background: #162C4E !important;
     cursor: pointer;
 }
 .acardion__title{
