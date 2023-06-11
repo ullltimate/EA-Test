@@ -49,8 +49,7 @@ body{
     min-height: calc(100vh - 192px);
 }
 .logo{
-    padding-top: 110px;
-    margin-bottom: 93px;
+    padding: 110px 0 93px 0;
     transform: translateY(-50px);
     opacity: 0;
     animation: anim 1s forwards;
@@ -65,8 +64,6 @@ body{
     max-width: 190px;
 }
 .title{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 72px;
     line-height: 104%;
@@ -76,13 +73,15 @@ body{
     opacity: 0.39;
 }
 .text{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
+}
+.font__poppins{
+    font-family: 'Poppins';
+    font-style: normal;
 }
 .countdown__content{
     transform: translateY(-50px);
@@ -105,8 +104,6 @@ body{
 }
 .timer-items {
     display: flex;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 72px;
     line-height: 100%;
@@ -130,9 +127,6 @@ body{
 .timer__title{
     position: relative;
     text-align: center;
-    color: white;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
@@ -186,8 +180,6 @@ body{
     background: none;
     border: none;
     color: #FFFFFF;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
@@ -256,28 +248,22 @@ body{
     cursor: pointer;
 }
 .popup__title{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 104%;
     text-align: center;
     text-transform: uppercase;
     color: #162C4E;
-    margin-top: 98px;
-    margin-bottom: 29px;
+    margin: 98px 0 29px 0;
 }
 .popup__text{
     max-width: 280px;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 30px;
-    margin-left: 24px;
+    margin: 0 0 30px 24px;
 }
 .popup__button{
     width: 200px;
@@ -286,16 +272,13 @@ body{
     background: #1D4169;
     border-radius: 40px;
     border: none;
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
     color: #FFFFFF;
 }
 .events__title{
-    padding-top: 110px;
-    padding-bottom: 40px;
+    padding: 110px 0 40px 0;
 }
 .text__font{
     font-family: 'SF Pro Display';
@@ -318,28 +301,30 @@ body{
     width: 85px;
     height: 682px;
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-1.jpeg') no-repeat center;
-    background-size: cover;
     position: relative;
     margin-right: 1px;
 }
 .accordion-button__bg__slide2{
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-2.jpeg') no-repeat center;
-    background-size: cover;
 }
 .accordion-button__bg__slide3-8{
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-3-8.jpeg') no-repeat center;
-    background-size: cover;
 }
 .accordion-button__bg__slide4-5{
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-4-5.jpeg') no-repeat center;
-    background-size: cover;
 }
 .accordion-button__bg__slide6{
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-6.jpeg') no-repeat center;
-    background-size: cover;
 }
 .accordion-button__bg__slide7{
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-7.jpeg') no-repeat center;
+}
+.accordion-button,
+.accordion-button__bg__slide2,
+.accordion-button__bg__slide3-8,
+.accordion-button__bg__slide4-5,
+.accordion-button__bg__slide6,
+.accordion-button__bg__slide7{
     background-size: cover;
 }
 .accordion-button__active, 
@@ -382,26 +367,24 @@ body{
 }
 .accordion-body__bg__slide2{
     background: url(./assets/images/slide-2.jpeg) no-repeat 20% 75%;
-    background-size: cover;
-    transform: none;
 }
 .accordion-body__bg__slide3-8{
     background: url(./assets/images/slide-3-8.jpeg) no-repeat 20% 75%;
-    background-size: cover;
-    transform: none;
 }
 .accordion-body__bg__slide4-5{
     background: url(./assets/images/slide-4-5.jpeg) no-repeat 20% 75%;
-    background-size: cover;
-    transform: none;
 }
 .accordion-body__bg__slide6{
     background: url(./assets/images/slide-6.jpeg) no-repeat 20% 75%;
-    background-size: cover;
-    transform: none;
 }
 .accordion-body__bg__slide7{
     background: url(./assets/images/slide-7.jpeg) no-repeat 20% 75%;
+}
+.accordion-body__bg__slide2,
+.accordion-body__bg__slide3-8,
+.accordion-body__bg__slide4-5,
+.accordion-body__bg__slide6,
+.accordion-body__bg__slide7{
     background-size: cover;
     transform: none;
 }
@@ -458,7 +441,6 @@ body{
         height: 85px;
         margin: 4px 0px;
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-1.jpeg') no-repeat center;
-        background-size: cover;
     }
     .accordion__title__text-direction{
         writing-mode: horizontal-tb; 
@@ -478,22 +460,25 @@ body{
     }
     .accordion-button__bg__slide2{
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-2.jpeg') no-repeat center;
-        background-size: cover;
     }
     .accordion-button__bg__slide3-8{
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-3-8.jpeg') no-repeat center;
-        background-size: cover;
     }
     .accordion-button__bg__slide4-5{
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-4-5.jpeg') no-repeat center;
-        background-size: cover;
     }
     .accordion-button__bg__slide6{
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-6.jpeg') no-repeat center;
-        background-size: cover;
     }
     .accordion-button__bg__slide7{
         background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('./assets/images/slide-7.jpeg') no-repeat center;
+    }
+    .accordion-button,
+    .accordion-button__bg__slide2,
+    .accordion-button__bg__slide3-8,
+    .accordion-button__bg__slide4-5,
+    .accordion-button__bg__slide6,
+    .accordion-button__bg__slide7{
         background-size: cover;
     }
 }
@@ -509,14 +494,13 @@ body{
         margin-bottom: 48px;
     }
     .events__title{
-        padding-top: 46px;
-        padding-bottom: 20px;
+        padding: 46px 0 20px 0;
     }
-    .accordion-button{
+    .accordion-button,
+    .accordion-body{
         width: 688px;
     }
     .accordion-body{
-        width: 688px;
         height: 460px;
     }
     .accordion__title{
@@ -552,10 +536,10 @@ body{
 }
 @media screen and (max-width: 768px) {
     .logo{
-        padding-top: 100px;
-        margin-bottom: 168px;
+        padding: 100px 0 168px 0;
     }
-    .title{
+    .title,
+    .timer-items{
         font-size: 36px;
     }
     .text{
@@ -569,9 +553,6 @@ body{
     }
     .countdown__timer{
         margin: 40px 0;
-    }
-    .timer-items{
-        font-size: 36px;
     }
     .timer__img{
         width: 64px;
@@ -696,8 +677,7 @@ body{
         text-align: center;
     }
     .logo{
-        padding-top: 80px;
-        margin-bottom: 66px;
+        padding: 80px 0 66px 0;
     }
     .countdown__title{
         margin-bottom: 16px;
