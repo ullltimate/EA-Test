@@ -28,8 +28,6 @@
 const btnSendEmail = document.querySelector('.footer-search__btn');
 const inputEmail = document.querySelector('.footer-search__input');
 const popup = document.querySelector('.popup');
-const closePopup = document.querySelector('.popup__img');
-const btnClosePopup = document.querySelector('.popup__button');
 const formEmail = document.querySelector('.footer-search');
 const popupTitle = document.querySelector('.popup__title');
 const popupText = document.querySelector('.popup__text');
@@ -39,11 +37,7 @@ const blockEvents = document.getElementById('all-events');
 formEmail.addEventListener('submit', async (e) => {
     e.preventDefault();
     let status = await submitEmail();
-    if (status === true){
-        showPopup();
-    } else {
-        showPopupError();
-    }
+    showPopup(status);
 })
 
 inputEmail.addEventListener('input', () => {
@@ -82,30 +76,30 @@ async function submitEmail() {
     }
 }
 
-function showPopup(){
-    if (popupTitle.innerText === 'ERROR!'){
+function showPopup(status){
+    if (status === true){
         popupTitle.innerText = 'SUCCESS!';
         popupText.innerText = 'You have successfully subscribed to the email newsletter';
+    } else {
+        popupTitle.innerText = 'ERROR!';
+        popupText.innerText = 'An error has occurred! You have not subscribed to the email newsletter. Try later!';
     }
     popup.style.display = 'block';
 }
 
-function showPopupError(){
-    popupTitle.innerText = 'ERROR!';
-    popupText.innerText = 'An error has occurred! You have not subscribed to the email newsletter. Try later!';
-    popup.style.display = 'block';
+function cancelPopup(elem){
+    if (elem.classList.contains('popup') || elem.classList.contains('popup__img') || elem.classList.contains('popup__button')){
+        popup.style.display = 'none';
+        btnSendEmail.disabled = true;
+        inputEmail.value = '';
+        btnSendEmail.style.background = "#DF2224";
+        inputEmail.style.border = `1px solid rgba(0, 0, 0, 0.8)`;
+    }
 }
 
-function cancelPopup(){
-    popup.style.display = 'none';
-    btnSendEmail.disabled = true;
-    inputEmail.value = '';
-    btnSendEmail.style.background = "#DF2224";
-    inputEmail.style.border = `1px solid rgba(0, 0, 0, 0.8)`
-}
-
-closePopup.addEventListener('click', cancelPopup);
-btnClosePopup.addEventListener('click', cancelPopup);
+popup.addEventListener('click', (e) => {
+    cancelPopup(e.target);
+})
 
 btnOtherEvents.addEventListener('click', () => {
     blockEvents.scrollIntoView({block: "start", behavior: "smooth"});
