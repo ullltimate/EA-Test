@@ -111,19 +111,19 @@ btnOtherEvents.addEventListener('click', () => {
     blockEvents.scrollIntoView({block: "start", behavior: "smooth"});
 })
 
-const arrayAcordionButton = document.querySelectorAll('.acardion-button');
-let activeButton = document.querySelector('.acardion-button__active');
+const arrayAccordionButton = document.querySelectorAll('.accordion-button');
+let activeButton = document.querySelector('.accordion-button__active');
 
-for(let i = 0; i < arrayAcordionButton.length; i++){
-    arrayAcordionButton[i].addEventListener('click', () => {
-        arrayAcordionButton[i].classList.add('acardion-button__active');
-        arrayAcordionButton[i].nextElementSibling.classList.add('acardion-body__active');
+for(let i = 0; i < arrayAccordionButton.length; i++){
+    arrayAccordionButton[i].addEventListener('click', () => {
+        arrayAccordionButton[i].classList.add('accordion-button__active');
+        arrayAccordionButton[i].nextElementSibling.classList.add('accordion-body__active');
         if (activeButton) {
-            activeButton.classList.remove('acardion-button__active');
-            activeButton.nextElementSibling.classList.remove('acardion-body__active');
+            activeButton.classList.remove('accordion-button__active');
+            activeButton.nextElementSibling.classList.remove('accordion-body__active');
         }
-        activeButton = (activeButton === arrayAcordionButton[i]) ? arrayAcordionButton[0] : arrayAcordionButton[i];
-        activeButton.classList.add('acardion-button__active');
-        activeButton.nextElementSibling.classList.add('acardion-body__active');
+        activeButton = (activeButton === arrayAccordionButton[i]) ? arrayAccordionButton[0] : arrayAccordionButton[i];
+        activeButton.classList.add('accordion-button__active');
+        activeButton.nextElementSibling.classList.add('accordion-body__active');
     })
 }
